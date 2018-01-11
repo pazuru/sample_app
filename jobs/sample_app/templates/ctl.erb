@@ -10,7 +10,7 @@ case $1 in
     chown -R vcap:vcap $RUN_DIR $LOG_DIR
     echo $$ > $PIDFILE
     cd /var/vcap/packages/sample_app
-    exec server.pl \
+    exec /var/vcap/packages/sample_app/server.pl \
       >> $LOG_DIR/sample_app.stdout.log \
       2>> $LOG_DIR/sample_app.stderr.log
     ;;
