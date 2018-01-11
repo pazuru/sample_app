@@ -1,0 +1,3 @@
+set -e -x
+
+cp server.pl ${BOSH_INSTALL_TARGET}/
