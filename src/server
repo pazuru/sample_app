@@ -1,7 +1,16 @@
-#!/bin/bash
+#!/usr/bin/perl
 
-while true
-do
-  echo "I am alive!"
-  sleep 10
-done
+select(STDERR);
+$|=1;
+select(STDOUT);
+$|=1;
+
+sub main {
+  print "Starting server\n";
+  for (;;) {
+    print "Still alive ".time()."\n";
+    sleep 10;
+  } 
+}
+
+main();
